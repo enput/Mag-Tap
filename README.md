@@ -117,3 +117,12 @@ Bekræft at:
 - Edge service kører som systemd service (auto-restart)
 - Parsing fejl logges, men stopper ikke processen
 - CSV skrivning er kø-baseret (ingen disk I/O i MQTT callback)
+
+## Mosquitto service
+
+- Åben services
+- Check om Mosquitto broker køre
+- Hvis den ikke køre, åben command promt som adminstrator
+- Gå til hvor Mosquitto blev installert "Default": cd c:\program Files\mosquitto
+- skriv: net start mosquitto
+- Verify med: netstat -a

@@ -24,7 +24,7 @@ class Settings:
     mqtt_port: int = _env_int("MQTT_PORT", 1883)
     mqtt_user: str = _env("MQTT_USER", "")
     mqtt_password: str = _env("MQTT_PASSWORD", "")
-    mqtt_keepalive: int = _env_int("MQTT_KEEPALIVE", 60)
+    mqtt_keepalive: int = _env_int("MQTT_KEEPALIVE", 300)
     mqtt_qos: int = _env_int("MQTT_QOS", 1)
     mqtt_client_id: str = _env("MQTT_CLIENT_ID", "edge-logger")
 

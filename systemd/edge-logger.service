@@ -1,0 +1,21 @@
+[Unit]
+Description=MQTT Edge Logger + Dashboard
+After=network.target mosquitto.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/edge-logger
+Environment=PYTHONUNBUFFERED=1
+Environment=MQTT_HOST=127.0.0.1
+Environment=MQTT_PORT=1883
+Environment=MQTT_USER=edge
+Environment=MQTT_PASSWORD=changeme
+Environment=MQTT_QOS=1
+Environment=LOG_DIR=/opt/edge-logger/logs
+Environment=APP_LOG_FILE=/opt/edge-logger/app.log
+ExecStart=/usr/bin/python3 /opt/edge-logger/app/main.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

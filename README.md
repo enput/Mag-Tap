@@ -109,7 +109,7 @@ python scripts/simulate_devices.py --host 127.0.0.1 --count 60
 Bekræft at:
 
 - CSV filer oprettes i `logs/`
-- Dashboard opdateres
+- Dashboard opdateres.
 
 ## Drift og robusthed
 
